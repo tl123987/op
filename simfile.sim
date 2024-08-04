@@ -14,7 +14,7 @@ LOGFILE $(OUTPUT_FILE_PREFIX)$_log.txt
 ERDFILE $(OUTPUT_FILE_PREFIX)$.vs
 PROGDIR C:\software\carsim2020\
 DATADIR C:\Users\Public\Documents\CarSim2020.0_Data\
-GUI_REFRESH_V CarSim_RefreshEvent_17896
+GUI_REFRESH_V CarSim_RefreshEvent_25520
 RESOURCEDIR C:\software\carsim2020\\Resources\
 PRODUCT_ID CarSim
 PRODUCT_VER 2020.0

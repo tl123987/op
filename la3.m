@@ -1,4 +1,4 @@
-function [sys,x0,str,ts] = lateral_control_mpc2(t,x,u,flag)
+function [sys,x0,str,ts] = la3(t,x,u,flag)
 % 该程序功能：横纵向控制（适配gen）
 % 程序版本 V1.0，MATLAB版本：R2022a,采用S函数的标准形式
 % 程序编写日期 2022.10.26
@@ -51,8 +51,8 @@ function sys = mdlOutputs(~,x,u)
 global U ;
 U=0;
 %车辆参数
-u(15);%后轮
-u(14);%前轮
+% u(15);%后轮
+% u(14);%前轮
 VehConf.cf=-148000;
 % VehConf.cf=u(14);
 VehConf.cr=-82204;
@@ -209,8 +209,8 @@ b=cell2mat(b_cons_cell);
 % b=cell2mat(b_cons);%（求解方程）状态量不等式约束的取值
 
 
-lb=delta_umin;
-ub=delta_umax;
+lb=[delta_umin];
+ub=[delta_umax];
 %%  开始求解过程，使用二次规划求解
 options = optimset('Algorithm','active-set');
 % options = optimset('Algorithm','interior-point');
